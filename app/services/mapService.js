@@ -2,8 +2,7 @@ angular.module('mapServiceModule', ['storageServiceModule'])
 
 .service('mapService', function($rootScope, storage) {
 
-	var maps;
-	var id;
+	var maps, id;
 	
 	function init(){
 		if(!maps){

@@ -1,10 +1,9 @@
-app.controller('MapperController', function ($scope, mapService) {
+app.controller('MapperController', function ($scope, mapService, drawCircleService) {
 	
 	init();
 	
 	function init(){
 		$scope.maps = mapService.getMaps();
-		console.log($scope.maps);
 	}
 	
 	/* watch */
@@ -34,6 +33,8 @@ app.controller('MapperController', function ($scope, mapService) {
 
 	$scope.selectNode = function(node){
 		$scope.node = node;
+		var el = document.getElementById('map');
+		drawCircleService.draw(el, $scope.map, node, 3);
 	};
 
 	$scope.newNode = function(name, text){
