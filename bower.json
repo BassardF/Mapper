@@ -1,0 +1,26 @@
+{
+  "name": "Mapper",
+  "version": "0.0.0",
+  "authors": [
+    "Frank Bassard <f.bassard@gmail.com>"
+  ],
+  "description": "Mind mapping tool",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+		"modernizr" : "*",
+		"angular" : "*",
+		"angular-route" : "*",
+		"angular-cookies" : "*",
+		"lodash" : "*",
+		"raphael" : "*",
+		"pure" : "git://github.com/yui/pure-release.git"
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Mind mapper</title>
+	<base href="/Mapper"/>
+	
+	<link rel="stylesheet" href="Mapper/bower_components/pure/pure-min.css">
+	<link rel="stylesheet" href="Mapper/css/toolbox.css">		
+	<link rel="stylesheet" href="Mapper/css/style.css">	
+	
+	<script src="Mapper/bower_components/angular/angular.min.js"></script>
+	<script src="Mapper/bower_components/lodash/lodash.min.js"></script>
+	<script src="Mapper/bower_components/raphael/raphael-min.js"></script>
+	<script src="Mapper/bower_components/modernizr/modernizr.js"></script>		
+	<script src="Mapper/bower_components/angular-route/angular-route.min.js"></script>
+	<script src="Mapper/bower_components/angular-cookies/angular-cookies.min.js"></script>	
+
+	
+	<script src="Mapper/app/app.js"></script>
+	<script src="Mapper/app/controllers/mapper.js"></script>
+	<script src="Mapper/app/services/storageService.js"></script>
+	<script src="Mapper/app/services/mapService.js"></script>
+	
+</head>
+
+<body>
+
+	<div ng-view class="full-height"></div>
+
+</body>
+</html>
