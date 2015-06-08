@@ -103,6 +103,18 @@ angular.module('mapServiceModule', ['storageServiceModule'])
 		save();
 	};
 
+	this.getChildren = function(mapName, node){
+		init();
+		var children = [];
+		var map = _.find(maps, {'name': mapName});
+		map.nodes.forEach(function(node_){
+			if(node_.parent == node.id){
+				children.push(node_);
+			}
+		});
+		return children;
+	};
+
 	this.isAncesterNode = function(mapName, givenNode, ancestor){
 		init();
 		var map = _.find(maps, {'name': mapName}),
