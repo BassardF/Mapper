@@ -60,8 +60,10 @@ angular.module('drawCircleModule', ['constantsModule', 'mapServiceModule'])
 	}
 
 	function adjustNodePlacement(){
+		var fuse = 0;
 		do {
 			var sorted = true;
+			fuse++;
 			flatNodes.forEach(function(n1){
 				flatNodes.forEach(function(n2){
 					var bbox1 = n1.circle[0].getBBox();
@@ -72,8 +74,7 @@ angular.module('drawCircleModule', ['constantsModule', 'mapServiceModule'])
 					}
 				});
 			});
-			sorted = true;
-		} while (!sorted);
+		} while (!sorted || fuse > 200);
 	}
 
 	function solveNodesOverlap(id1, id2){

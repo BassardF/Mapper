@@ -1,5 +1,19 @@
+@font-face {
+    font-family: global;
+    src: url(../fonts/arvo/Arvo_Regular_201.ttf);
+}
+
 html, body{
 	height: 100%;
+}
+
+body *{
+	font-family: global !important;
+	letter-spacing: 2px;
+}
+
+h1, h2, h3{
+	letter-spacing: 3px;
 }
 
 .full-height{

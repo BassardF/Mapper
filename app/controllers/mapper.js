@@ -1,6 +1,7 @@
 app.controller('MapperController', function ($scope, mapService, drawCircleService) {
 	
 	init();
+	$scope.action = "maps";
 	
 	function init(){
 		$scope.maps = mapService.getMaps();
@@ -33,7 +34,11 @@ app.controller('MapperController', function ($scope, mapService, drawCircleServi
 
 	$scope.selectNode = function(node){
 		$scope.node = node;
+		var svg = document.querySelector('#map svg');
 		var el = document.getElementById('map');
+		if(svg){
+			el.removeChild(svg);
+		}
 		drawCircleService.draw(el, $scope.map, node, 3);
 	};
 
@@ -41,6 +46,7 @@ app.controller('MapperController', function ($scope, mapService, drawCircleServi
 		$scope.newNodeName = null;
 		$scope.newNodeText = null;
 		mapService.addNode($scope.map.name, $scope.node ? $scope.node.id : null , name, text);
+		$scope.action = "maps";
 	};
 
 	$scope.isAncesterNode = function(givenNode, ancestor){

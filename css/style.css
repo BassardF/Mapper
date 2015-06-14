@@ -12,7 +12,7 @@ input{
 button{
 	outline: none;
 	font-size: 11px;
-	border: solid 2px #EFEFEF;
+	border: solid 1px #EFEFEF;
 	border-radius: 10px;
 	color: #EFEFEF;
 	background: none;
@@ -60,7 +60,7 @@ button{
 
 #directory input{
 	color: #EFEFEF;
-	border-bottom: solid 1px #EFEFEF;
+	border-bottom: solid 1px #759caf;
 }
 
 #directory button:hover{
@@ -132,6 +132,30 @@ button{
 	margin-left: 95px;
 }
 
+#directory .toolbar-bundle svg{
+	height: 30px;
+	width: 30px;
+	padding: 10px;
+	border-right: solid 1px #EFEFEF;
+	border-bottom: solid 1px #EFEFEF;
+	fill: #EFEFEF;
+	cursor: pointer;
+	float: left;
+	transition: all 0.5s ease;
+	background-color: #2B3A42;
+	display: block;
+}
+
+#directory .toolbar-bundle svg.selected, #directory .toolbar-bundle svg:hover{
+	fill: #FF530D;
+	background-color: #2B3A42;
+	border-right: solid 1px #2B3A42;
+}
+
+#directory .toolbar-bundle svg.selected:last-child, #directory .toolbar-bundle svg:last-child:hover{
+	border-bottom: solid 1px #2B3A42;
+}
+
 #map{
 	min-height:	100%;
 }
@@ -154,35 +178,4 @@ button{
 #tools button:hover{
 	background-color: #2B3A42;
 	color: white;
-}
-
-#tools .toolbar-bundle svg{
-	height: 30px;
-	width: 30px;
-	padding: 10px;
-	border: solid 2px #3F5765;
-	fill: #EFEFEF;
-	margin-top: -2px;
-	cursor: pointer;
-	float: right;
-	transition: all 0.5s ease;
-	background-color: #3F5765;
-	display: block;
-}
-
-#tools .toolbar-bundle svg:first-child{
-	margin-top: -12px;
-}
-
-#tools .toolbar-bundle svg:hover{
-	fill: #3F5765;
-	background-color: #EFEFEF;
-	border: solid 2px #EFEFEF;
-}
-
-#tools .toolbar-bundle svg.selected{
-	fill: #3F5765;
-	background-color: #EFEFEF;
-	border-color: #3F5765;
-	border: solid 2px #EFEFEF;
 }
