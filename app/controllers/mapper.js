@@ -61,5 +61,4 @@ app.controller('MapperController', function ($scope, mapService, drawCircleServi
 		$scope.action = $scope.action === name ? null : name;
 	}
 	
-	
 });

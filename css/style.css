@@ -132,6 +132,10 @@ button{
 	margin-left: 95px;
 }
 
+.toolbar-bundle{
+	max-width: 60px;
+}
+
 #directory .toolbar-bundle svg{
 	height: 30px;
 	width: 30px;

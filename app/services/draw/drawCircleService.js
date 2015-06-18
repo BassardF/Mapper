@@ -11,8 +11,8 @@ angular.module('drawCircleModule', ['constantsModule', 'mapServiceModule'])
 		bundle = {
 			map : map,
 			node : node,
-			width : elt.offsetWidth,
-			height : elt.offsetHeight
+			width : elt.offsetWidth - 5,
+			height : elt.offsetHeight - 5
 		}
 		bundle.center = {
 			x : bundle.width / 2,
